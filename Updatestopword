@@ -1,0 +1,9 @@
+# Updates on STOPWORD LINES 
+
+# O comando set(STOPWORDS) permite escolher quais palavras excluiremos do arquivo final acompanhando do atributo stopwords.update no qual inserimos as palavras setadas.
+```python
+#altered lines
+text = open('wordcloud.txt', mode='r', encoding='utf-8').read()
+stopwords = set(STOPWORDS)
+stopwords.update(["pa", "um", "pouco", "e", "E", "Se", "se", "mais", "da", "do", "de", "mas", "um pouco", "que", "mais", "O", "o", "A", "Mais", "Menos", "Sim", "Não", "pelo", "mim", "meu", "para", "trata", "sou", "porém", "Acredito", "Eu", "eu", "foi", "em", "comentário"])
+```
