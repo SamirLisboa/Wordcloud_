@@ -43,3 +43,6 @@ wc=WordCloud(
 wc.generate(text)
 wc.to_file('wordcloud_aqruivodesaida.png')
 ```
+#Arquivo final gerado [primeiro teste]
+
+![wordcloud_aqruivodesaida](https://user-images.githubusercontent.com/84924884/137898215-0f9fb0e7-2f39-4799-bf51-a0dd21b868e6.png)
