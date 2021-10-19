@@ -1,0 +1,21 @@
+ # min_word_lentgth= define qual a quantidade minima de letras nas palavras que iremos exibir.
+ 
+ import matplotlib.pyplot as plt
+from wordcloud import WordCloud, STOPWORDS
+import sys, os
+os.chdir(sys.path[0])
+
+text = open('wordcloud.txt', mode='r', encoding='utf-8').read()
+stopwords = set(STOPWORDS)
+stopwords.update(["Apesar", "pa", "um", "pouco", "e", "E", "Se", "se", "mais", "da", "do", "de", "mas", "um pouco", "que", "mais", "O", "o", "A", "Mais", "Menos", "Sim", "Não", "pelo", "mim", "meu", "para", "trata", "sou", "porém", "Acredito", "Eu", "eu", "foi", "em", "comentário"])
+
+wc=WordCloud(
+        background_color='white',
+        stopwords=stopwords,
+        min_word_length=5,
+        height = 600,
+        width=400
+        )
+
+wc.generate(text)
+wc.to_file('wordcloud_aqruivodesaidaminword.png')
