@@ -4,26 +4,42 @@
 # cmd -> -pip --upgrade -q 
 #         pip install wordcloud
 
+
+
+
 # Importa os pacotes necessários (The packages)
 
+```
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud, STOPWORDS
 import sys, os
 os.chdir(sys.path[0])
+```
 
 # Identifica o texto a ser aberto e lido (Indentify open and read the .txt archive)
+
+```
 text = open('wordcloud.txt', mode='r', encoding='utf-8').read()
+```
 
 # Seta as palavras a serem puladas/excluidas do arquivo final (stopword setting)
-stopwords = STOPWORDS
 
+```
+stopwords = STOPWORDS
+```
 # Seta as configurações de saída do arquivo png (final arvhive settings)
+
+```
 wc=WordCloud(
         background_color='black',
         stopwords=stopwords,
         height = 600,
         width=400
         )
+```
+
 # Gera o arquivo final (Generate the final archive)        
+```
 wc.generate(text)
 wc.to_file('wordcloud_aqruivodesaida.png')
+```
